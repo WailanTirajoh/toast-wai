@@ -1,0 +1,40 @@
+{
+  "name": "toast-wai",
+  "version": "0.0.1",
+  "description": "Toast notification",
+  "main": "dist/toast-wai.cjs.js",
+  "module": "dist/toast-wai.esm.js",
+  "browser": "dist/toast-wai.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "node test/spec",
+    "pretest": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WailanTirajoh/toast-wai.git"
+  },
+  "keywords": [
+    "toastr",
+    "toast",
+    "notification"
+  ],
+  "author": "Wailan Tirajoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WailanTirajoh/toast-wai/issues"
+  },
+  "homepage": "https://github.com/WailanTirajoh/toast-wai#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

@@ -1,0 +1,92 @@
+.toast-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: fixed;
+  margin: 10px;
+  width: 250px;
+}
+
+.toast-container[data-position^="top-"] {
+  top: 0;
+}
+
+.toast-container[data-position$="-right"] {
+  right: 0;
+}
+
+.toast-container[data-position^="bottom-"] {
+  bottom: 0;
+}
+
+.toast-container[data-position$="-left"] {
+  left: 0;
+}
+
+.toast-container[data-position$="-center"] {
+  left: 50%;
+  transform: translateX(-50px);
+}
+
+.toast-container .toast {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  transition: transform 250ms ease-in-out;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.toast-container[data-position$="-right"] .toast {
+  transform: translateX(110%);
+}
+
+.toast-container[data-position$="-left"] .toast {
+  transform: translateX(-110%);
+}
+
+.toast-container[data-position="top-center"] .toast {
+  transform: translateY(-110vh);
+}
+
+.toast-container[data-position="bottom-center"] .toast {
+  transform: translateY(110vh);
+}
+
+.toast-container .toast.danger {
+  border-top: 7.5px solid red;
+}
+
+.toast-container .toast.success {
+  border-top: 7.5px solid green;
+}
+
+.toast-container .toast.show {
+  transform: translate(0, 0);
+}
+
+.toast-container .toast.move {
+  transition: all 0.5s ease;
+}
+
+.toast-container .toast.progress::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: calc(100% * var(--toast-wai-progress, 1));
+  background-color: rgba(32, 32, 36, 0.759);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.toast-container .toast::after {
+  position: absolute;
+  content: "\00D7";
+  top: 5px;
+  right: 10px;
+}
