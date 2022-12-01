@@ -25,14 +25,7 @@
     "url": "https://github.com/WailanTirajoh/toast-wai/issues"
   },
   "homepage": "https://github.com/WailanTirajoh/toast-wai#readme",
-  "devDependencies": {
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
-    "rollup": "^2.79.1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
-  },
+  "devDependencies": {},
   "files": [
     "dist",
     "src"
