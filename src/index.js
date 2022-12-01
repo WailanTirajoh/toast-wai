@@ -1,5 +1,3 @@
-import "./index.css"
-
 const DEFAULT_OPTIONS = {
   lifetime: 3000,
   containerId: 'wai-toast',
